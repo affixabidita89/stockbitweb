@@ -11,4 +11,4 @@
       Then I redirected to <URLStream> stream
       Examples:
         | websiteURL                    | URL                          | username            | password       | URLStream                           |
-        | "https://stockbit.com/ | "https://stockbit.com/#/login" | "affixabidita@gmail.com" | "Test123" | "https://stockbit.com/#/stream" |
+        | "https://stockbit.com/ | "https://stockbit.com/#/login" | "username" | "password" | "https://stockbit.com/#/stream" |

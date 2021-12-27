@@ -74,8 +74,8 @@ public class SeleniumDriver {
         seleniumDriver = null;
     }
 
-    public static Click(String test){
-        driver.findElement();
-    }
+//    public static Click(String test){
+//        driver.findElement();
+//    }
 
 }

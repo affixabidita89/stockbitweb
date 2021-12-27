@@ -24,11 +24,12 @@ public class HomepageLocators {
     @FindBy(how = How.LINK_TEXT,using="Sign Up")
     public WebElement signUpLink;
 
-    @FindBy(linkText = "Log In")
-    public WebElement loginLink;
+    @FindBy(how = How.XPATH, using = "//body/div[@id='app-react']/div[@id='landing-wrapper']/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/a[1]")
+    private WebElement loginButton;
 
-//    public void ClickOnLogin(){
-//        loginLink.click();
-//    }
+    public  void LogInButton(){
+        loginButton.click();
+    }
+
 
 }

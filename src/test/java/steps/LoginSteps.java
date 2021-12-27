@@ -4,10 +4,12 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.BeforeClass;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import pages.actions.StockbitHomePageAction;
 import pages.actions.StockbitLoginPageAction;
 import pages.actions.StockbitStreamPageAction;
+import pages.locators.HomepageLocators;
 import utils.SeleniumDriver;
 
 public class LoginSteps {
@@ -15,7 +17,7 @@ public class LoginSteps {
     StockbitHomePageAction stockbitHomePageAction = new StockbitHomePageAction();
     StockbitLoginPageAction stockbitLoginPageAction = new StockbitLoginPageAction();
     StockbitStreamPageAction stockbitStreamPageAction = new StockbitStreamPageAction();
-
+    SeleniumDriver driver;
 //    @Given("I am on {string} the Home Page of Stockbit.com")
 //    public void iAmOnTheHomePageOfStockbitCom(String websiteURL) {
 //        System.out.println("... Test");
@@ -34,8 +36,8 @@ public class LoginSteps {
     @And("I click Login menu")
     public void iClickLoginMenu() {
 //        stockbitHomePageAction.clickLoginMenu();
-
-
+        HomepageLocators page = PageFactory.initElements(SeleniumDriver.getDriver(),HomepageLocators.class);
+        page.LogInButton();
     }
 
     @Then("I redirected to {string}")

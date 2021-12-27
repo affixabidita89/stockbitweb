@@ -6,11 +6,12 @@ import utils.SeleniumDriver;
 
 public class StockbitHomePageAction {
 
-    HomepageLocators homepageLocators=null;
+HomepageLocators homepageLocators = new HomepageLocators();
 
     public StockbitHomePageAction(){
-        this.homepageLocators=new HomepageLocators();
-        PageFactory.initElements(SeleniumDriver.getDriver(),homepageLocators);
+//        this.homepageLocators=new HomepageLocators();
+//        PageFactory.initElements(SeleniumDriver.getDriver(),this);
+        homepageLocators = PageFactory.initElements(SeleniumDriver.getDriver(),HomepageLocators.class);
 
     }
 
@@ -39,11 +40,12 @@ public class StockbitHomePageAction {
         homepageLocators.signUpLink.click();
     }
 
-    public void clickLoginMenu(){
-        System.out.println("ada d homepage action klik login menu");
-        System.out.println(homepageLocators);
-//        homepageLocators.ClickOnLogin();
-        homepageLocators.loginLink.click();
+    public void clickLoginButton(){
+//        System.out.println("ada d homepage action klik login menu");
+//        System.out.println(homepageLocators);
+////        homepageLocators.ClickOnLogin();
+//        homepageLocators.loginLink.click();
+
 
     }
 
